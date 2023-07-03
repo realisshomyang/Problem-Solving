@@ -59,15 +59,14 @@ int main()
     {
         int f = find(Edges[i].from);
         int t = find(Edges[i].to);
-
+        if (cnt == V - 2)
+        {
+            break;
+        }
         if (Union(f, t))
         {
             cnt++;
             result += Edges[i].val;
-            if (cnt == V - 2)
-            {
-                break;
-            }
         }
     }
     cout << result << endl;
