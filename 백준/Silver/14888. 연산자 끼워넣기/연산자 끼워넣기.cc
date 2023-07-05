@@ -1,5 +1,5 @@
 #include <iostream>
-#define MAXNUM 100000000
+#define MAXNUM 1000000000
 using namespace std;
 int minres = MAXNUM;
 int maxres = -MAXNUM;
