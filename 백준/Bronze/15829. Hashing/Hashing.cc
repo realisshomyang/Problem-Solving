@@ -3,16 +3,18 @@
 #include <cmath>
 using namespace std;
 int L;
+long long hashing = 1234567891;
 int main()
 {
-    cin >> L;
     string str;
+    cin >> L;
     cin >> str;
-    int ans = 0;
+    long long ans = 0;
+    long long r = 1;
     for (int i = 0; i < L; i++)
     {
-        int tmp = int(str[i]) - 96;
-        ans += tmp * pow(31, i);
+        ans = (ans + (str[i] - 96) * r) % hashing;
+        r = (r * 31) % hashing;
     }
     cout << ans;
 }
